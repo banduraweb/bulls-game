@@ -137,6 +137,9 @@ body {
 .calendar div {
   display: none; }
 
+.calendar-mon div:first-child {
+  margin-left: 1px; }
+
 .calendar-tue div:first-child {
   margin-left: 103px; }
 
