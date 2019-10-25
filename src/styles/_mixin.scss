@@ -1,0 +1,69 @@
+@import "classes";
+@import "const_variables";
+
+@mixin renderCalendar($days, $day) {
+  @if ($days>31) or ($days<28) {
+    @error "$max 31 days, min 28!!!";
+  }
+
+  @for $i from 1 through $days {
+
+    div:nth-child(#{$i}) {
+      @extend %isActive;
+      @if ($day=="mon") {
+        :nth-child(1) {
+          margin-left: 0;
+        }
+      }
+      @if ($day=="tue") {
+        :nth-child(1) {
+          margin-left: $CeilMarginLeftX+$AddBorderMarginXtue;
+        }
+      }
+
+      @if ($day=="wed") {
+        &:nth-child(1) {
+          margin-left: $CeilMarginLeftX*2+$AddBorderMarginXwed;
+        }
+      }
+
+      @if ($day=="thu") {
+        &:nth-child(1) {
+          margin-left: $CeilMarginLeftX*3+$AddBorderMarginXthu;
+        }
+      }
+
+      @if ($day=="fri") {
+        &:nth-child(1) {
+          margin-left: $CeilMarginLeftX*4+$AddBorderMarginXfri;
+        }
+      }
+
+      @if ($day=="sat") {
+        &:nth-child(1) {
+          margin-left: $CeilMarginLeftX*5+$AddBorderMarginXsat;
+        }
+      }
+
+      @if ($day=="sun") {
+        &:nth-child(1) {
+          margin-left: $CeilMarginLeftX*6+$AddBorderMarginXsun;
+        }
+      }
+
+      justify-content: center;
+      &:after {
+        content: "#{$i}";
+      }
+
+      &:hover {
+        cursor: pointer;
+        position: relative;
+        border: 1px seashell solid;
+        animation-duration: 2s;
+        animation-name: move_ceil;
+      }
+    }
+
+  }
+}

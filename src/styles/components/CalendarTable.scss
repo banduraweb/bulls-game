@@ -1,0 +1,11 @@
+@import "../mixin";
+@import "../animation_table";
+@import "../const_variables";
+
+.calendar {
+  @extend %CalendarContainer;
+  @include renderCalendar(31, "wed");
+  & div {
+    display: none;
+  }
+}

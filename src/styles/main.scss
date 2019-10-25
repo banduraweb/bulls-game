@@ -1,3 +1,9 @@
+@import "reset";
+@import "mixin";
+@import "animation_table";
+@import "const_variables";
+@import "components/CalendarTable";
+
 body {
-  margin: 0;
+  @extend %WrapperClass;
 }

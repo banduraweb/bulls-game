@@ -1,0 +1,33 @@
+@import "const_variables";
+
+%isActive {
+
+  display: flex;
+  margin: 1px;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+  line-height: 100px;
+}
+
+%WrapperClass {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+%CalendarContainer {
+
+  margin-top: 10%;
+  box-sizing: border-box;
+  width: $TableWidth;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+}
