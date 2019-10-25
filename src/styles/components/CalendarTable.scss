@@ -17,26 +17,8 @@
   }
 }
 
-.calendar-#{'tue'} div:first-child {
-  margin-left: $CeilMarginLeftX+($CellGap+2);
-}
-
-.calendar-#{'wed'} div:first-child {
-  margin-left: $CeilMarginLeftX*2+($CellGap+2*2);
-}
-
-.calendar-#{'thu'} div:first-child {
-  margin-left: $CeilMarginLeftX*3+($CellGap+2*3);
-}
-
-.calendar-#{'fri'} div:first-child {
-  margin-left: $CeilMarginLeftX*4+($CellGap+2*4);
-}
-
-.calendar-#{'sat'} div:first-child {
-  margin-left: $CeilMarginLeftX*5+($CellGap+2*5);
-}
-
-.calendar-#{'sun'} div:first-child {
-  margin-left: $CeilMarginLeftX*6+($CellGap+2*6);
+@each $v, $day in $Static_days {
+  .calendar-#{$day} div:first-child {
+    margin-left: $CeilMarginLeftX*$v+($CellGap)+(2*$v);
+  }
 }
