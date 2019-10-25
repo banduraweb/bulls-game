@@ -1,14 +1,15 @@
 @import "const_variables";
+@import "mixin";
 
 %isActive {
-
   display: flex;
   margin: 1px;
-  box-sizing: border-box;
   width: 100px;
   height: 100px;
   background-color: #eee;
   line-height: 100px;
+  justify-content: center;
+  @include renderCalendarContent;
 }
 
 %WrapperClass {
@@ -21,13 +22,26 @@
 }
 
 %CalendarContainer {
-
   margin-top: 10%;
-  box-sizing: border-box;
   width: $TableWidth;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+}
 
+%Hover {
+  &:hover {
+    cursor: pointer;
+    position: relative;
+    box-shadow: 1px 1px 1px 1px gray;
+    animation-duration: 2s;
+    animation-name: move_ceil;
+  }
+}
+
+%DefaultDivState {
+  & div {
+    display: none;
+  }
 }
