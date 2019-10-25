@@ -41,6 +41,7 @@
   "lint-staged": {
     "linters": {
       "*.scss": [
+        "stylelint",
         "git add"
       ],
       "*.js": [
@@ -54,8 +55,7 @@
     },
     "ignore": [
       "**/dist/**",
-      "**/lib/**",
-      "**/src/**"
+      "**/lib/**"
     ]
   },
   "husky": {

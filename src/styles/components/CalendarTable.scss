@@ -4,7 +4,7 @@
 
 .calendar {
   @extend %CalendarContainer;
-  @include renderCalendar(31, "wed");
+  @include renderCalendar(28, "fri");
   & div {
     display: none;
   }
