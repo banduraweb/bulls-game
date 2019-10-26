@@ -11,7 +11,7 @@
       4: 'thu',
       5: 'fri',
       6: 'sat',
-      7: 'sun',
+      0: 'sun',
     };
   }
   for (let i = 0; i < innersForDays.length; i++) {
