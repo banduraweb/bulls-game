@@ -2,7 +2,6 @@
 @import "mixin";
 
 %isActive {
-  @include renderCalendarContent;
   display: flex;
   margin: $CellGap;
   width: $CellWidth;
@@ -12,13 +11,6 @@
   align-items: center;
   transform: translateY(0);
   transition: background-color 2s, transform 2s;
-}
-
-%WrapperClass {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 800px;
 }
 
 %CalendarContainer {

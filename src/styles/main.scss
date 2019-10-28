@@ -1,8 +1,10 @@
 @import "reset";
-@import "mixin";
 @import "const_variables";
 @import "components/CalendarTable";
 
 body {
-  @extend %WrapperClass;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
 }
