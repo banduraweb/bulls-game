@@ -1,30 +1,6 @@
 body {
   margin: 0; }
 
-@-webkit-keyframes move_ceil {
-  from {
-    top: 0;
-    background-color: #8796ff; }
-  to {
-    top: -20px;
-    background-color: darkcyan; } }
-
-@keyframes move_ceil {
-  from {
-    top: 0;
-    background-color: #8796ff; }
-  to {
-    top: -20px;
-    background-color: darkcyan; } }
-
-@keyframes move_ceil {
-  from {
-    top: 0;
-    background-color: #8796ff; }
-  to {
-    top: -20px;
-    background-color: darkcyan; } }
-
 .calendar-1 div:nth-child(-n+1), .calendar-2 div:nth-child(-n+2), .calendar-3 div:nth-child(-n+3), .calendar-4 div:nth-child(-n+4), .calendar-5 div:nth-child(-n+5), .calendar-6 div:nth-child(-n+6), .calendar-7 div:nth-child(-n+7), .calendar-8 div:nth-child(-n+8), .calendar-9 div:nth-child(-n+9), .calendar-10 div:nth-child(-n+10), .calendar-11 div:nth-child(-n+11), .calendar-12 div:nth-child(-n+12), .calendar-13 div:nth-child(-n+13), .calendar-14 div:nth-child(-n+14), .calendar-15 div:nth-child(-n+15), .calendar-16 div:nth-child(-n+16), .calendar-17 div:nth-child(-n+17), .calendar-18 div:nth-child(-n+18), .calendar-19 div:nth-child(-n+19), .calendar-20 div:nth-child(-n+20), .calendar-21 div:nth-child(-n+21), .calendar-22 div:nth-child(-n+22), .calendar-23 div:nth-child(-n+23), .calendar-24 div:nth-child(-n+24), .calendar-25 div:nth-child(-n+25), .calendar-26 div:nth-child(-n+26), .calendar-27 div:nth-child(-n+27), .calendar-28 div:nth-child(-n+28), .calendar-29 div:nth-child(-n+29), .calendar-30 div:nth-child(-n+30), .calendar-31 div:nth-child(-n+31) {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,10 +9,18 @@ body {
   width: 100px;
   height: 100px;
   background-color: #eee;
-  line-height: 100px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: background-color 2s, -webkit-transform 2s;
+  transition: background-color 2s, -webkit-transform 2s;
+  transition: background-color 2s, transform 2s;
+  transition: background-color 2s, transform 2s, -webkit-transform 2s; }
   .calendar-1 div:nth-child(-n+1):nth-child(1):after, .calendar-2 div:nth-child(-n+2):nth-child(1):after, .calendar-3 div:nth-child(-n+3):nth-child(1):after, .calendar-4 div:nth-child(-n+4):nth-child(1):after, .calendar-5 div:nth-child(-n+5):nth-child(1):after, .calendar-6 div:nth-child(-n+6):nth-child(1):after, .calendar-7 div:nth-child(-n+7):nth-child(1):after, .calendar-8 div:nth-child(-n+8):nth-child(1):after, .calendar-9 div:nth-child(-n+9):nth-child(1):after, .calendar-10 div:nth-child(-n+10):nth-child(1):after, .calendar-11 div:nth-child(-n+11):nth-child(1):after, .calendar-12 div:nth-child(-n+12):nth-child(1):after, .calendar-13 div:nth-child(-n+13):nth-child(1):after, .calendar-14 div:nth-child(-n+14):nth-child(1):after, .calendar-15 div:nth-child(-n+15):nth-child(1):after, .calendar-16 div:nth-child(-n+16):nth-child(1):after, .calendar-17 div:nth-child(-n+17):nth-child(1):after, .calendar-18 div:nth-child(-n+18):nth-child(1):after, .calendar-19 div:nth-child(-n+19):nth-child(1):after, .calendar-20 div:nth-child(-n+20):nth-child(1):after, .calendar-21 div:nth-child(-n+21):nth-child(1):after, .calendar-22 div:nth-child(-n+22):nth-child(1):after, .calendar-23 div:nth-child(-n+23):nth-child(1):after, .calendar-24 div:nth-child(-n+24):nth-child(1):after, .calendar-25 div:nth-child(-n+25):nth-child(1):after, .calendar-26 div:nth-child(-n+26):nth-child(1):after, .calendar-27 div:nth-child(-n+27):nth-child(1):after, .calendar-28 div:nth-child(-n+28):nth-child(1):after, .calendar-29 div:nth-child(-n+29):nth-child(1):after, .calendar-30 div:nth-child(-n+30):nth-child(1):after, .calendar-31 div:nth-child(-n+31):nth-child(1):after {
     content: "1"; }
   .calendar-1 div:nth-child(-n+1):nth-child(2):after, .calendar-2 div:nth-child(-n+2):nth-child(2):after, .calendar-3 div:nth-child(-n+3):nth-child(2):after, .calendar-4 div:nth-child(-n+4):nth-child(2):after, .calendar-5 div:nth-child(-n+5):nth-child(2):after, .calendar-6 div:nth-child(-n+6):nth-child(2):after, .calendar-7 div:nth-child(-n+7):nth-child(2):after, .calendar-8 div:nth-child(-n+8):nth-child(2):after, .calendar-9 div:nth-child(-n+9):nth-child(2):after, .calendar-10 div:nth-child(-n+10):nth-child(2):after, .calendar-11 div:nth-child(-n+11):nth-child(2):after, .calendar-12 div:nth-child(-n+12):nth-child(2):after, .calendar-13 div:nth-child(-n+13):nth-child(2):after, .calendar-14 div:nth-child(-n+14):nth-child(2):after, .calendar-15 div:nth-child(-n+15):nth-child(2):after, .calendar-16 div:nth-child(-n+16):nth-child(2):after, .calendar-17 div:nth-child(-n+17):nth-child(2):after, .calendar-18 div:nth-child(-n+18):nth-child(2):after, .calendar-19 div:nth-child(-n+19):nth-child(2):after, .calendar-20 div:nth-child(-n+20):nth-child(2):after, .calendar-21 div:nth-child(-n+21):nth-child(2):after, .calendar-22 div:nth-child(-n+22):nth-child(2):after, .calendar-23 div:nth-child(-n+23):nth-child(2):after, .calendar-24 div:nth-child(-n+24):nth-child(2):after, .calendar-25 div:nth-child(-n+25):nth-child(2):after, .calendar-26 div:nth-child(-n+26):nth-child(2):after, .calendar-27 div:nth-child(-n+27):nth-child(2):after, .calendar-28 div:nth-child(-n+28):nth-child(2):after, .calendar-29 div:nth-child(-n+29):nth-child(2):after, .calendar-30 div:nth-child(-n+30):nth-child(2):after, .calendar-31 div:nth-child(-n+31):nth-child(2):after {
@@ -110,12 +94,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh; }
+  height: 45em; }
 
 .calendar {
-  margin-top: 10%;
   width: 720px;
-  height: 100%;
+  height: 613px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,13 +109,11 @@ body {
 
 .calendar-1 div:hover:nth-child(-n+1), .calendar-2 div:hover:nth-child(-n+2), .calendar-3 div:hover:nth-child(-n+3), .calendar-4 div:hover:nth-child(-n+4), .calendar-5 div:hover:nth-child(-n+5), .calendar-6 div:hover:nth-child(-n+6), .calendar-7 div:hover:nth-child(-n+7), .calendar-8 div:hover:nth-child(-n+8), .calendar-9 div:hover:nth-child(-n+9), .calendar-10 div:hover:nth-child(-n+10), .calendar-11 div:hover:nth-child(-n+11), .calendar-12 div:hover:nth-child(-n+12), .calendar-13 div:hover:nth-child(-n+13), .calendar-14 div:hover:nth-child(-n+14), .calendar-15 div:hover:nth-child(-n+15), .calendar-16 div:hover:nth-child(-n+16), .calendar-17 div:hover:nth-child(-n+17), .calendar-18 div:hover:nth-child(-n+18), .calendar-19 div:hover:nth-child(-n+19), .calendar-20 div:hover:nth-child(-n+20), .calendar-21 div:hover:nth-child(-n+21), .calendar-22 div:hover:nth-child(-n+22), .calendar-23 div:hover:nth-child(-n+23), .calendar-24 div:hover:nth-child(-n+24), .calendar-25 div:hover:nth-child(-n+25), .calendar-26 div:hover:nth-child(-n+26), .calendar-27 div:hover:nth-child(-n+27), .calendar-28 div:hover:nth-child(-n+28), .calendar-29 div:hover:nth-child(-n+29), .calendar-30 div:hover:nth-child(-n+30), .calendar-31 div:hover:nth-child(-n+31) {
   cursor: pointer;
-  position: relative;
   -webkit-box-shadow: 1px 1px 1px 1px gray;
           box-shadow: 1px 1px 1px 1px gray;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-name: move_ceil;
-          animation-name: move_ceil; }
+  background-color: #00acdc;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px); }
 
 .calendar div {
   display: none; }
