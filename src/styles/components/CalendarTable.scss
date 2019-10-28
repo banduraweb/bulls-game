@@ -1,13 +1,12 @@
-@import "../animation_table";
 @import "../const_variables";
 @import "../classes";
 @import "../mixin";
 
 .calendar {
-
   @extend %CalendarContainer;
-  @extend %DefaultDivState;
-
+  div {
+    display: none;
+  }
 }
 
 @for $i from 1 through 31 {
@@ -19,6 +18,6 @@
 
 @each $v, $day in $Static_days {
   .calendar-#{$day} div:first-child {
-    margin-left: $CeilMarginLeftX*$v+($CellGap)+(2*$v);
+    margin-left: $CellMarginLeftX*$v+($CellGap)+(2*$v);
   }
 }

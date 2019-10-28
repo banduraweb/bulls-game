@@ -2,29 +2,28 @@
 @import "mixin";
 
 %isActive {
-  display: flex;
-  margin: 1px;
-  width: 100px;
-  height: 100px;
-  background-color: #eee;
-  line-height: 100px;
-  justify-content: center;
   @include renderCalendarContent;
+  display: flex;
+  margin: $CellGap;
+  width: $CellWidth;
+  height: $CellHeight;
+  background-color: #eee;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(0);
+  transition: background-color 2s, transform 2s;
 }
 
 %WrapperClass {
-
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-
+  height: 45em;
 }
 
 %CalendarContainer {
-  margin-top: 10%;
   width: $TableWidth;
-  height: 100%;
+  height: 613px;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -33,15 +32,8 @@
 %Hover {
   &:hover {
     cursor: pointer;
-    position: relative;
     box-shadow: 1px 1px 1px 1px gray;
-    animation-duration: 2s;
-    animation-name: move_ceil;
-  }
-}
-
-%DefaultDivState {
-  & div {
-    display: none;
+    background-color: #00acdc;
+    transform: translateY(-20px);
   }
 }
