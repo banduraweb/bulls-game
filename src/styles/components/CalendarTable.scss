@@ -3,27 +3,39 @@
 
 .calendar {
   @extend %CalendarContainer;
-  div {
-    display: none;
+  & div {
+    display: flex;
+    margin: $CellGap;
+    width: $CellWidth;
+    height: $CellHeight;
+    background-color: #eee;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(0);
+    transition: background-color 3s, transform 3s;
+    &:hover {
+      cursor: pointer;
+      box-shadow: 1px 1px 1px 1px gray;
+      background-color: #00acdc;
+      transform: translateY(-20px);
+    }
   }
 }
 
 @for $i from 1 through 31 {
   .calendar > div:nth-child(#{$i}):after {
     content: "#{$i}";
-    margin: auto;
-  }
-}
-
-@for $i from 1 through 31 {
-  .calendar-#{$i} div:nth-child(-n+#{$i}) {
-    @extend %isActive;
-    @extend %Hover;
   }
 }
 
 @each $v, $day in $Static_days {
   .calendar-#{$day} div:first-child {
     margin-left: $CellMarginLeftX*$v+($CellGap)+(2*$v);
+  }
+}
+
+@for $i from 28 through 31 {
+  .calendar-#{$i} div:nth-child(#{$i}) ~ div {
+    display: none;
   }
 }

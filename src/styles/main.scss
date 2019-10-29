@@ -2,9 +2,14 @@
 @import "const_variables";
 @import "components/CalendarTable";
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  height: 100%;
 }
