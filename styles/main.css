@@ -1,4 +1,54 @@
+.header.center.orange-text {
+  text-transform: uppercase;
+  font-weight: 900; }
+
 body {
-  margin: 0; }
+  background: url("../images/bulls_and_cows.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.light {
+  font-weight: 800;
+  color: #00acdc;
+  letter-spacing: 1px; }
+
+#gray {
+  display: none;
+  position: fixed;
+  background-color: rgba(1, 1, 1, 0.75);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 100; }
+
+#modal-form {
+  display: none;
+  width: 80vw;
+  height: 90vh;
+  background-color: #00acdc;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 150;
+  color: #474848;
+  font-weight: 600; }
+
+.preloader-wrapper.big {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto; }
+
+.preloader-wrapper {
+  left: calc(50vw - 50px);
+  top: 50vh; }
 
 /*# sourceMappingURL=main.css.map */
