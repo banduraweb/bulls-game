@@ -25,9 +25,10 @@ body {
   z-index: 100; }
 
 #modal-form {
+  padding: 20px;
   display: none;
   width: 80vw;
-  height: 90vh;
+  height: 100%;
   background-color: #00acdc;
   font-size: 20px;
   text-align: center;
@@ -39,8 +40,8 @@ body {
   left: 0;
   margin: auto;
   z-index: 150;
-  color: #474848;
-  font-weight: 600; }
+  font-weight: 600;
+  opacity: 0.8; }
 
 .preloader-wrapper.big {
   width: 100px;
@@ -50,5 +51,33 @@ body {
 .preloader-wrapper {
   left: calc(50vw - 50px);
   top: 50vh; }
+
+#input {
+  text-align: center;
+  letter-spacing: .5px;
+  border: 1px solid #26a69a;
+  border-radius: 5px;
+  background: white;
+  outline: none;
+  color: #000000;
+  width: 10%;
+  height: 36px; }
+
+.header__modal-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.result__container tr th, td {
+  text-align: center; }
+
+.result__container {
+  background-color: #00acdc; }
+
+#exit {
+  background-color: red; }
 
 /*# sourceMappingURL=main.css.map */

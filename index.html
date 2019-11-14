@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./styles/main.css">
 
-
 </head>
 <body>
 <nav class="light-blue lighten-1" role="navigation">
@@ -16,7 +15,6 @@
     <ul class="right hide-on-med-and-down">
       <li><a href="#">Navbar Link</a></li>
     </ul>
-
     <ul id="nav-mobile" class="sidenav">
       <li><a href="#">Navbar Link</a></li>
     </ul>
@@ -37,44 +35,53 @@
       </button>
     </div>
     <br><br>
-
   </div>
 </div>
-
 
 <div class="container">
-
-  <div class="section">
-
-    <!--   Icon Section   -->
-    <div class="row">
-
-    </div>
-
-  </div>
-  <br><br>
-</div>
-
-
-<div id="gray">
-  <div class="preloader-wrapper big active">
-    <div class="spinner-layer spinner-yellow">
-      <div class="circle-clipper left">
-        <div class="circle"></div>
-      </div>
-      <div class="gap-patch">
-        <div class="circle"></div>
-      </div>
-      <div class="circle-clipper right">
-        <div class="circle"></div>
+  <div id="gray">
+    <div id="preloader-wrapper" class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div id="modal-form">
+  <div id="modal-form">
+    <div class="header__modal-form">
+    <input id="input" type="text" minlength="4" maxlength="4" required placeholder=" 1 2 3 4 ">
+    <button id="button__play" class="btn waves-effect waves-light" type="submit" name="action">Submit
+      <i class="material-icons right">START</i>
+    </button>
+      <button id="exit" class="btn waves-effect waves-light" type="submit" name="action">Show Number
+        <i class="material-icons right">and Exit</i>
+      </button>
+    </div>
+    <div class="result__container">
+      <table>
+        <thead>
+        <tr>
+          <th>Your guess</th>
+          <th>Bulls</th>
+          <th>Cows</th>
+        </tr>
+        </thead>
+        <tbody id="result-part">
 
+        </tbody>
+        </table>
+    </div>
+  </div>
 
 </div>
+
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
