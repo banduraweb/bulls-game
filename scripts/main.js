@@ -33,23 +33,36 @@ btnPlay.addEventListener('click', play);
 function validateInputData() {
   const userValue = document.getElementById('input').value;
   if (userValue === ``) {
-    alert('You have enter 4 numbers before game!');
+    swal({
+      title: "error!",
+      text: "You have enter 4 numbers before game!",
+      icon: "error",
+    });
     return false;
   } else if (!isFinite(userValue)) {
-    alert('Only numbers!');
+    swal({
+      title: "error!",
+      text: "Only numbers!",
+      icon: "error",
+    });
     input.value = ``;
     return false;
   } else if (userValue.length !== 4) {
-    alert(`Four numbers! You entered ${userValue.length}`);
-    return false;
-  } else if (userValue.includes('0')) {
-    alert(`only numbers from 1 to 9`);
+    swal({
+      title: "error!",
+      text: `Four numbers! You entered ${userValue.length}`,
+      icon: "error",
+    });
     return false;
   } else if (new Set(userValue).size !== 4) {
     let notUnique = [...userValue]
       .filter((item, i, arr) => arr.indexOf(item) !== arr.lastIndexOf(item))
       .join();
-    alert(`Only unique numbers (this numbers are repeated${notUnique})`);
+    swal({
+      title: "error!",
+      text: `Only unique numbers (this numbers are repeated${notUnique})`,
+      icon: "error",
+    });
     return false;
   }
 
@@ -60,10 +73,10 @@ generateUniqNum(randomFour);
 
 function randomFour() {
   return [
-    Math.floor(1 + Math.random() * (9 + 1 - 1)),
-    Math.floor(1 + Math.random() * (9 + 1 - 1)),
-    Math.floor(1 + Math.random() * (9 + 1 - 1)),
-    Math.floor(1 + Math.random() * (9 + 1 - 1))
+    Math.floor(Math.random() * (10)),
+    Math.floor(Math.random() * (10)),
+    Math.floor(Math.random() * (10)),
+    Math.floor(Math.random() * (10)),
   ];
 }
 
@@ -106,7 +119,11 @@ function play() {
     </td>
     </tr>`;
     if (score.bulls===4) {
-      alert('YOU WIN!!!!!!!!');
+      swal({
+        title: "Good job!",
+        text: "You won!",
+        icon: "success",
+      });
       setTimeout(function () {
         window.location.reload();
       }, 3000);
